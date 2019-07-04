@@ -17,7 +17,6 @@ class ContainerLists extends Component {
             lists: {
                 todoList: [...this.state.lists.todoList, item],
                 doneList: [...this.state.lists.doneList]
-
             }
         })
     }
