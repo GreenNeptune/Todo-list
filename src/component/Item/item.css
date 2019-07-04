@@ -1,0 +1,10 @@
+.marked {
+    text-decoration: line-through;
+}
+
+.icon {
+    margin: 6px 10px 6px 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/activities_svg/favorite.svg")
+}
