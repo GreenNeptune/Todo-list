@@ -5,7 +5,7 @@ import ContainerLists from "./component/ContainerLists/ContainerLists";
 const App = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header title="Todo List" logo=""/>
       <ContainerLists />
     </div>
   );
