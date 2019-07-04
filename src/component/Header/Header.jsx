@@ -6,10 +6,10 @@ class Header extends Component {
     }
 
     render() {
-        return (
+        return (    
             <div className="app-header">
               <div className="app-header-title">{this.props.title}</div> 
-              <div className={this.props.logo}></div> 
+              <div className="logo"></div> 
             </div>
         )
     };
