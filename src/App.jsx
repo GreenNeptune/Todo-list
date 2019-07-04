@@ -7,12 +7,12 @@ const App = () => {
 
     <div className="container-full">
       <div className="row">
-        <div className="col-8 offset-2 d-flex justify-space-between">
+        <div className="col-8 offset-2">
           <Header title="Todo List" />
         </div>
       </div>
       <div className="row">
-        < div className="col-8 offset-2 d-flex justify-content-center">
+        < div className="col-8 offset-2">
           <ContainerLists />
         </div>
       </div>
