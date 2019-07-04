@@ -7,12 +7,12 @@ const App = () => {
 
     <div className="container-full">
       <div className="row">
-        <div className="col-8 offset-2">
+        <div className="col">
           <Header title="Todo List" />
         </div>
       </div>
       <div className="row">
-        < div className="col-8 offset-2">
+        < div className="col">
           <ContainerLists />
         </div>
       </div>
