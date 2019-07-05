@@ -14,8 +14,10 @@ export default class Item extends Component {
         const target = e.target;
         target.checked ? this.setState({ marked: true }) : this.setState({ marked: false });
     }
+    
     render() {
         this.state.marked ? this.textMarked = 'done-task' : this.textMarked = '';
+        //  text this.props.text  
         const { text, onCheckBoxClick } = this.props;
         return (
             <li className="list-group-item">
