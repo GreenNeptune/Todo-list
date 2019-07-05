@@ -7,7 +7,7 @@ export default class Lists extends Component {
     render() {
         return (
             <div>
-                <div className="row border-black margin-top">
+                <div className="row border-black margin-top background-green">
                     <div className="col offset-1">
                         <h3 className="deafault-list-header">Todo List</h3>
                     </div>
@@ -35,7 +35,7 @@ export default class Lists extends Component {
                     </div>
                 </div>
 
-                <div className="row border-black margin-top">
+                <div className="row border-black margin-top background-green">
                     <div className="col offset-1">
                         <h3 className="deafault-list-header">Done List</h3>
                     </div>
