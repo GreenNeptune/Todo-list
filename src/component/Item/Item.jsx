@@ -5,21 +5,18 @@ export default class Item extends Component {
     constructor() {
         super();
         this.state = {
+            text: '',
             marked: false,
-            item: {
-                text: '',
-                marked: false,
-                favorite: false,
-                date: '',
-                delete: false
-            }
+            favorite: false,
+            date: '',
+            delete: false
         }
         this.textMarked = '';
         this.handleCheckBoxClick = this.handleCheckBoxClick.bind(this);
     }
     componentDidUpdate() {
-        if (this.state.marked && this.state.item.text.length > 0) {
-            this.props.onCheckBoxClick(Object.assign({}, this.state.item))
+        if (this.state.marked && this.state.text.length > 0) {
+            this.props.onCheckBoxClick(Object.assign({}, this.state))
         }
     }
 
@@ -30,16 +27,11 @@ export default class Item extends Component {
         if (target.checked) {
             console.log(this.props.text);
             this.setState({
-                marked: true
-            })
-            this.setState({
-                item: {
-                    text: this.props.text,
-                    marked: true,
-                    favorite: false,
-                    date: '',
-                    delete: false
-                }
+                text: this.props.text,
+                marked: true,
+                favorite: false,
+                date: '',
+                delete: false
             })
         }
         else {

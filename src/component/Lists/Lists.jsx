@@ -35,7 +35,6 @@ export default class Lists extends Component {
                                                     text={obj.text}
                                                     key={index}
                                                     onCheckBoxClick={this.onCheckBoxClick}
-                                                    doneList={this.props.doneList}
                                                 />
                                             )}
                                         </ul>
