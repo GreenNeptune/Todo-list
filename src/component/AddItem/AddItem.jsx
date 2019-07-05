@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./addItem.css"
 class AddItem extends Component {
     constructor() {
         super();
@@ -22,9 +23,16 @@ class AddItem extends Component {
     }
     render() {
         return (
-            <div>
-                <input type="text" onChange={this.handleChange} />
-                <button onClick={this.handleSubmit}>Add task</button>
+            <div className="row add-item">
+                <div className="d-flex align-items-center col-8 offset-2">
+                    <div>
+                        <input className="add-item-input" type="text" onChange={this.handleChange} />
+                    </div>
+                    <div className="add-item-logo-container" onClick={this.handleSubmit}>
+                        <div className="add-item-logo"></div>
+                    </div>
+                </div>
+
             </div>
         )
     };

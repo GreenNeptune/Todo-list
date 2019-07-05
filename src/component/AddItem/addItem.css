@@ -1,0 +1,26 @@
+.add-item-input {
+    width: 50vw;
+}
+
+.add-item-logo-container {
+    width: 2vw;
+    height: 2vw;
+    margin-left: 2vw;
+    padding: 1vw;
+    background-color: #904cdc;
+    border: 0.2vw solid white;
+    border-radius: 50%;
+
+}
+
+.add-item-logo {
+    position: relative;
+    bottom: 0.5vw;
+    right: 0.5vw;
+    width: 1vw;
+    height: 1vw;
+    background-image: url("../../img/activities_svg/white-plus-sign.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
