@@ -5,6 +5,13 @@ import Collapsible from 'react-collapsible';
 import Scroll from '../Scroll/Scroll';
 
 export default class Lists extends Component {
+    constructor() {
+        super();
+        this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
+    }
+    onCheckBoxClick(itemDone) {
+        this.props.addToDoneList(Object.assign({}, itemDone));
+    }
     render() {
         return (
             <div>
@@ -27,7 +34,7 @@ export default class Lists extends Component {
                                                 <Item
                                                     text={obj.text}
                                                     key={index}
-                                                // onCheckBoxClick={this.onCheckBoxClick}
+                                                    onCheckBoxClick={this.onCheckBoxClick}
                                                 />
                                             )}
                                         </ul>
@@ -37,15 +44,14 @@ export default class Lists extends Component {
                                 }
                             </Scroll>
                         </Collapsible>
-                        
                     </div>
                     <div className="d-flex align-items-center col-1 offset-5">
                         <Collapsible open={true}>
                             <Scroll>
-                                {this.props.toDolist && this.props.toDolist.length > 0 ?
+                                {this.props.doneList && this.props.doneList.length > 0 ?
                                     (
                                         <ul className="list-group">
-                                            {this.props.toDolist.map((obj, index) =>
+                                            {this.props.doneList.map((obj, index) =>
                                                 <Item
                                                     text={obj.text}
                                                     key={index}
@@ -59,7 +65,7 @@ export default class Lists extends Component {
                                 }
                             </Scroll>
                         </Collapsible>
-                        
+
                     </div>
                 </div>
             </div>

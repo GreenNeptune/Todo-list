@@ -1,79 +1,93 @@
-    @import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap");
 
-    .deafault-todo-list {
-        margin-top: 1%;
-    }
+.deafault-todo-list {
+  margin-top: 1%;
+}
 
-    .Collapsible__trigger {
-        height: 40px;
-        font-family: 'DM Serif Display',
-            serif;
-        cursor: pointer;
+.Collapsible__trigger {
+  height: 40px;
+  font-family: "DM Serif Display", serif;
+  cursor: pointer;
+}
 
-    }
 
+<<<<<<< HEAD
     .list-group {
         width: 46vw;
         margin-top: 1%;
         height: 20vw;
     }
+=======
+>>>>>>> b06acee8f7744629715c11408ab27ea16ef8c189
 
-    .background-green {
-        background-color: #1aa51a;
-        border-top: 2px solid black;
-        -webkit-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
+.list-group {
+  width: 46vw;
+  margin-top: 1%;
+  height: 22vw;
+}
 
-    }
+.margin-top {
+  margin-top: 50px;
+}
 
-    .margin-top {
-        margin-top: 50px;
-    }
+.deafault-list-header {
+  padding: 1vw;
+  font-size: 2em;
+  color: white;
+}
 
-    .deafault-list-header {
-        position: relative;
-        right: 4vw;
-        padding: 1vw;
-        font-size: 2em;
-        color: white;
-    }
+.Collapsible__trigger {
+  font-size: 4em;
+  color: white;
+  font-family: "DM Serif Display", serif;
+}
 
-    .Collapsible__trigger {
-        font-size: 4em;
-        color: white;
-        font-family: 'DM Serif Display',
-            serif;
-    }
 
-    .style-bgc {
-        background-color: #3498db;
-        margin-top: 1%;
-    }
+.deafault-list-header {
+  position: relative;
+  right: 4vw;
+  padding: 1vw;
+  font-size: 2em;
+  color: white;
+}
 
-    .Collapsible__trigger:after {
-        font-family: 'FontAwesome';
-        content: '\25BE';
-        position: absolute;
-        right: 25px;
-        top: -87px;
-        display: block;
-        transition: transform 300ms;
-        -webkit-transition: transform 300ms;
-        -moz-transition: transform 300ms;
-        -ms-transition: transform 300ms;
-        -o-transition: transform 300ms;
-    }
+.Collapsible__trigger:after {
+  font-family: "FontAwesome";
+  content: "\25BE";
+  position: absolute;
+  left: 44px;
+  top: -87px;
+  display: block;
+  transition: transform 300ms;
+  -webkit-transition: transform 300ms;
+  -moz-transition: transform 300ms;
+  -ms-transition: transform 300ms;
+  -o-transition: transform 300ms;
+}
 
-    .Collapsible__trigger.is-open:after {
-        transform: rotateZ(180deg);
-        -webkit-transform: rotateZ(180deg);
-        -moz-transform: rotateZ(180deg);
-        -ms-transform: rotateZ(180deg);
-        -o-transform: rotateZ(180deg);
-    }
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+}
 
-    .Collapsible__trigger.is-disabled {
-        opacity: 0.5;
-        background-color: grey;
-    }
+.Collapsible__trigger:after {
+  font-family: 'FontAwesome';
+  content: '\25BE';
+  position: absolute;
+  right: 25px;
+  top: -87px;
+  display: block;
+  transition: transform 300ms;
+  -webkit-transition: transform 300ms;
+  -moz-transition: transform 300ms;
+  -ms-transition: transform 300ms;
+  -o-transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey;
+}

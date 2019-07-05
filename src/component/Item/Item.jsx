@@ -5,20 +5,51 @@ export default class Item extends Component {
     constructor() {
         super();
         this.state = {
-            marked: false
+            marked: false,
+            item: {
+                text: '',
+                marked: false,
+                favorite: false,
+                date: '',
+                delete: false
+            }
         }
         this.textMarked = '';
         this.handleCheckBoxClick = this.handleCheckBoxClick.bind(this);
     }
+    componentDidUpdate() {
+        if (this.state.marked && this.state.item.text.length > 0) {
+            this.props.onCheckBoxClick(Object.assign({}, this.state.item))
+        }
+    }
+
     handleCheckBoxClick(e) {
         const target = e.target;
-        target.checked ? this.setState({ marked: true }) : this.setState({ marked: false });
+
+        // target.checked ? this.setState({ marked: true }) : this.setState({ marked: false });
+        if (target.checked) {
+            console.log(this.props.text);
+            this.setState({
+                marked: true
+            })
+            this.setState({
+                item: {
+                    text: this.props.text,
+                    marked: true,
+                    favorite: false,
+                    date: '',
+                    delete: false
+                }
+            })
+        }
+        else {
+            this.setState({ marked: false })
+        }
     }
-    
+
     render() {
+        const { text } = this.props;
         this.state.marked ? this.textMarked = 'done-task' : this.textMarked = '';
-        //  text this.props.text  
-        const { text, onCheckBoxClick } = this.props;
         return (
             <li className="list-group-item d-flex justify-content-between">
                 <div className="d-flex justify-content-between">
