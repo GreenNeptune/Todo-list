@@ -20,15 +20,15 @@ export default class Item extends Component {
         //  text this.props.text  
         const { text, onCheckBoxClick } = this.props;
         return (
-            <li className="list-group-item">
-                <div className="d-flex">
+            <li className="list-group-item d-flex justify-content-between">
+                <div className="d-flex justify-content-between">
                     <input onChange={this.handleCheckBoxClick} title="mark" type="checkbox" className="space-icon" />
                     <div title="favorite" className="icon favorite space-icon"></div>
-                </div>
-                <div className="d-flex">
                     <div className={`text-style ${this.textMarked}`}>
                         {text}
                     </div>
+                </div>
+                <div>
                     <div title="delete" className="icon trash"></div>
                 </div>
             </li>
