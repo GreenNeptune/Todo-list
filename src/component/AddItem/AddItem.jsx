@@ -25,7 +25,7 @@ class AddItem extends Component {
             <div className="row add-item">
                 <div className="d-flex align-items-center col-8 offset-2">
                     <div>
-                        <input className="add-item-input" type="text" onChange={this.handleChange} />
+                        <input className="add-item-input" type="text" maxLength="115" onChange={this.handleChange} />
                     </div>
                     <div className="add-item-logo-container" onClick={this.handleSubmit}>
                         <div className="add-item-logo"></div>

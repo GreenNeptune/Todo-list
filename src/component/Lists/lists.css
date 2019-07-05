@@ -46,12 +46,13 @@
   margin-top: 1%;
 }
 
+
 .Collapsible__trigger:after {
   font-family: "FontAwesome";
   content: "\25BE";
   position: absolute;
-  left: -21px;
-  top: -85px;
+  left: 44px;
+  top: -87px;
   display: block;
   transition: transform 300ms;
   -webkit-transition: transform 300ms;
