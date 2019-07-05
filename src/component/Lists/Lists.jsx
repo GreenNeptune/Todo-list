@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './lists.css';
 import Item from '../Item/Item';
 import Collapsible from 'react-collapsible';
+import Scroll from '../Scroll/Scroll';
 
 export default class Lists extends Component {
     render() {
         return (
             <div>
-
                 <div className="row border-black margin-top background-green">
                     <div className="col offset-1">
                         <h3 className="deafault-list-header">Todo List</h3>
@@ -16,21 +16,23 @@ export default class Lists extends Component {
                 <div className="row ToDo">
                     <div className="d-flex align-items-center col-9 offset-1">
                         <Collapsible open={true}>
-                            {this.props.toDolist && this.props.toDolist.length > 0 ?
-                                (
-                                    <ul className="list-group">
-                                        {this.props.toDolist.map((obj, index) =>
-                                            <Item
-                                                text={obj.text}
-                                                key={index}
-                                            // onCheckBoxClick={this.onCheckBoxClick}
-                                            />
-                                        )}
-                                    </ul>
-                                )
-                                :
-                                <div></div>
-                            }
+                            <Scroll>
+                                {this.props.toDolist && this.props.toDolist.length > 0 ?
+                                    (
+                                        <ul className="list-group">
+                                            {this.props.toDolist.map((obj, index) =>
+                                                <Item
+                                                    text={obj.text}
+                                                    key={index}
+                                                // onCheckBoxClick={this.onCheckBoxClick}
+                                                />
+                                            )}
+                                        </ul>
+                                    )
+                                    :
+                                    <div></div>
+                                }
+                            </Scroll>
                         </Collapsible>
                     </div>
                 </div>
