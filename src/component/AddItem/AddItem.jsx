@@ -31,7 +31,6 @@ class AddItem extends Component {
                         <div className="add-item-logo"></div>
                     </div>
                 </div>
-
             </div>
         )
     };

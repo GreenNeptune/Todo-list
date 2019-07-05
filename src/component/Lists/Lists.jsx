@@ -8,12 +8,9 @@ export default class Lists extends Component {
     constructor() {
         super();
         this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
-        this.state = {
-            marked: false
-        }
     }
-    onCheckBoxClick(isMarked) {
-        this.setState({ marked: isMarked })
+    onCheckBoxClick(itemDone) {
+        this.props.addToDoneList(Object.assign({}, itemDone));
     }
     render() {
         return (
@@ -37,8 +34,8 @@ export default class Lists extends Component {
                                                 <Item
                                                     text={obj.text}
                                                     key={index}
-                                                    marked={this.state.marked}
                                                     onCheckBoxClick={this.onCheckBoxClick}
+                                                    doneList={this.props.doneList}
                                                 />
                                             )}
                                         </ul>
@@ -52,10 +49,10 @@ export default class Lists extends Component {
                     <div className="d-flex align-items-center col-1 offset-5">
                         <Collapsible open={true}>
                             <Scroll>
-                                {this.props.toDolist && this.props.toDolist.length > 0 ?
+                                {this.props.doneList && this.props.doneList.length > 0 ?
                                     (
                                         <ul className="list-group">
-                                            {this.props.toDolist.map((obj, index) =>
+                                            {this.props.doneList.map((obj, index) =>
                                                 <Item
                                                     text={obj.text}
                                                     key={index}
