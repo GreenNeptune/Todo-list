@@ -10,6 +10,7 @@ export default class Lists extends Component {
         this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
     }
     onCheckBoxClick(itemDone) {
+        debugger
         this.props.addToDoneList(Object.assign({}, itemDone));
     }
     render() {
@@ -35,6 +36,7 @@ export default class Lists extends Component {
                                                     text={obj.text}
                                                     key={index}
                                                     onCheckBoxClick={this.onCheckBoxClick}
+                                                    doneList={this.props.doneList}
                                                 />
                                             )}
                                         </ul>

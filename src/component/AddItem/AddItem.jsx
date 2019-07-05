@@ -25,11 +25,7 @@ class AddItem extends Component {
             <div className="row container-add-item">
                 <div className="col-6 offset-2">
                     <div>
-<<<<<<< HEAD
-                        <input className="add-item-input" type="text" maxlength="65" onChange={this.handleChange} />
-=======
                         <input className="add-item-input" type="text" maxLength="65" onChange={this.handleChange} />
->>>>>>> b06acee8f7744629715c11408ab27ea16ef8c189
                     </div>
 
                 </div>
