@@ -14,7 +14,6 @@ class AddItem extends Component {
         }
     }
     handleChange(e) {
-
         let inputVal = e.target.value;
         this.setState({ text: inputVal })
     }

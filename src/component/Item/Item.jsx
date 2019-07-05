@@ -13,8 +13,9 @@ export default class Item extends Component {
     handleCheckBoxClick(e) {
         const target = e.target;
         target.checked ? this.setState({ marked: true }) : this.setState({ marked: false });
+        this.props.handleCheckBoxClick(Object.assign({}, this.state.marked));
     }
-    
+
     render() {
         this.state.marked ? this.textMarked = 'done-task' : this.textMarked = '';
         //  text this.props.text  

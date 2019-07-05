@@ -5,6 +5,17 @@ import Collapsible from 'react-collapsible';
 import Scroll from '../Scroll/Scroll';
 
 export default class Lists extends Component {
+    constructor() {
+        super();
+        this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
+        this.state = {
+            marked: false
+        }
+    }
+    onCheckBoxClick(isMarked) {
+        this.setState({ marked: isMarked })
+
+    }
     render() {
         return (
             <div>
@@ -24,7 +35,8 @@ export default class Lists extends Component {
                                                 <Item
                                                     text={obj.text}
                                                     key={index}
-                                                // onCheckBoxClick={this.onCheckBoxClick}
+                                                    marked={this.state.marked}
+                                                    onCheckBoxClick={this.onCheckBoxClick}
                                                 />
                                             )}
                                         </ul>
@@ -36,7 +48,6 @@ export default class Lists extends Component {
                         </Collapsible>
                     </div>
                 </div>
-
                 <div className="row border-black margin-top background-green">
                     <div className="col offset-2">
                         <h3 className="deafault-list-header">Done List</h3>
@@ -45,7 +56,7 @@ export default class Lists extends Component {
                 <div className="row Done">
                     <div className="d-flex align-items-center col-9 offset-2">
                         <Collapsible open={true}>
-                            {this.props.doneList && this.props.doneList.length > 0 ?
+                            {this.props.doneList && this.props.doneList.length > 0 && this.state.marked ?
                                 (
                                     <ul>
                                         {this.props.doneList.map((obj, index) =>
@@ -55,7 +66,6 @@ export default class Lists extends Component {
                                 )
                                 :
                                 ""
-
                             }
                         </Collapsible>
                     </div>

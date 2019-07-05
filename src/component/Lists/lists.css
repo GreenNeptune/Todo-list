@@ -1,78 +1,74 @@
-    @import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap");
 
-    .deafault-todo-list {
-        margin-top: 1%;
-        padding-left: 2%;
-    }
+.deafault-todo-list {
+  margin-top: 1%;
+  padding-left: 2%;
+}
 
-    .Collapsible__trigger {
-        height: 40px;
-        font-family: 'DM Serif Display',
-            serif;
-        cursor: pointer;
+.Collapsible__trigger {
+  height: 40px;
+  font-family: "DM Serif Display", serif;
+  cursor: pointer;
+}
 
-    }
+.list-group {
+  width: 50vw;
+  margin-top: 1%;
+  height: 20vh;
+}
 
-    .list-group {
-        width: 50vw;
-        margin-top: 1%;
-        height: 20vh;
-    }
+.background-green {
+  background-color: #1aa51a;
+  border-top: 2px solid black;
+  -webkit-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
+}
 
-    .background-green {
-        background-color: #1aa51a;
-        border-top: 2px solid black;
-        -webkit-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.75);
+.margin-top {
+  margin-top: 50px;
+}
 
-    }
+.deafault-list-header {
+  padding: 1vw;
+  font-size: 2em;
+  color: white;
+}
 
-    .margin-top {
-        margin-top: 50px;
-    }
+.Collapsible__trigger {
+  font-size: 4em;
+  color: white;
+  font-family: "DM Serif Display", serif;
+}
 
-    .deafault-list-header {
-        padding: 1vw;
-        font-size: 2em;
-        color: white;
-    }
+.style-bgc {
+  background-color: #3498db;
+  margin-top: 1%;
+}
 
-    .Collapsible__trigger {
-        font-size: 4em;
-        color: white;
-        font-family: 'DM Serif Display',
-            serif;
-    }
+.Collapsible__trigger:after {
+  font-family: "FontAwesome";
+  content: "\25BE";
+  position: absolute;
+  left: -21px;
+  top: -85px;
+  display: block;
+  transition: transform 300ms;
+  -webkit-transition: transform 300ms;
+  -moz-transition: transform 300ms;
+  -ms-transition: transform 300ms;
+  -o-transition: transform 300ms;
+}
 
-    .style-bgc {
-        background-color: #3498db;
-        margin-top: 1%;
-    }
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+}
 
-    .Collapsible__trigger:after {
-        font-family: 'FontAwesome';
-        content: '\25BE';
-        position: absolute;
-        left: -21px;
-        top: -85px;
-        display: block;
-        transition: transform 300ms;
-        -webkit-transition: transform 300ms;
-        -moz-transition: transform 300ms;
-        -ms-transition: transform 300ms;
-        -o-transition: transform 300ms;
-    }
-
-    .Collapsible__trigger.is-open:after {
-        transform: rotateZ(180deg);
-        -webkit-transform: rotateZ(180deg);
-        -moz-transform: rotateZ(180deg);
-        -ms-transform: rotateZ(180deg);
-        -o-transform: rotateZ(180deg);
-    }
-
-    .Collapsible__trigger.is-disabled {
-        opacity: 0.5;
-        background-color: grey;
-    }
+.Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey;
+}
