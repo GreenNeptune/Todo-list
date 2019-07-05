@@ -1,26 +1,44 @@
+.container-add-item {
+    height: 5vw;
+}
+
 .add-item-input {
     width: 50vw;
+    height: 2vw;
+    max-height: 2vw;
 }
 
 .add-item-logo-container {
-    width: 2vw;
-    height: 2vw;
+    position: relative;
+    bottom: 2vw;
+    width: 4vw;
+    height: 4vw;
     margin-left: 2vw;
-    padding: 1vw;
+    padding: 2.5vw;
     background-color: #904cdc;
-    border: 0.2עvw solid white;
+  
     border-radius: 50%;
 
 }
 
 .add-item-logo {
     position: relative;
-    bottom: 0.5vw;
-    right: 0.5vw;
-    width: 1vw;
-    height: 1vw;
+    width: 3vw;
+    height: 3vw;
+    top: -1.5vw;
+    left: -1.5vw;
     background-image: url("../../img/activities_svg/white-plus-sign.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+
+.add-item-logo-container:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    background-color: #631fb1;
+    transition: all 0.2s ease-in 0s;
+
 }
