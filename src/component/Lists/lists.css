@@ -8,9 +8,23 @@
 
 }
 
+.border-black{
+    border: 1px solid black;
+}
+
+.margin-top{
+    margin-top: 50px;
+}
+
+.deafault-list-header{
+    padding: 1vw;
+    font-size: 1.8em;
+    color: white;
+}
+
 .Collapsible__trigger {
-    height: 40px;
-    background-color: #fff;
+    font-size: 4em;
+    color: white;
     font-family: 'DM Serif Display',
         serif;
 }
