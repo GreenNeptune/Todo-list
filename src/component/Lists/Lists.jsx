@@ -8,7 +8,7 @@ export default class Lists extends Component {
         return (
             <div>
                 <div className="ToDo">
-                    <Collapsible trigger={'Todo List'}>
+                    <Collapsible trigger={'Todo List'} >
                         {this.props.toDolist && this.props.toDolist.length > 0 ?
                             (
                                 <ul className="list-group">

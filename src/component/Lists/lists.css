@@ -3,9 +3,6 @@
 .deafault-todo-list {
     margin-top: 1%;
     padding-left: 2%;
-
-
-
 }
 
 .Collapsible__trigger {
@@ -13,6 +10,7 @@
     background-color: #fff;
     font-family: 'DM Serif Display',
         serif;
+    cursor: pointer;
 }
 
 .list-group {
@@ -20,3 +18,22 @@
 }
 
 .deafault-done-list {}
+
+.Collapsible__trigger:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg);
+}
+
+.Collapsible__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+}
