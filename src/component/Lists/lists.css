@@ -14,9 +14,9 @@
     }
 
     .list-group {
-        width: 777px;
-        height: 300px;
+        width: 50vw;
         margin-top: 1%;
+        height: 20vh;
     }
 
     .background-green {
