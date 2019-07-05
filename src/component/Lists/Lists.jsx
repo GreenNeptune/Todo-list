@@ -11,7 +11,11 @@ export default class Lists extends Component {
                         (
                             <ul className="list-group">
                                 {this.props.toDolist.map((obj, index) =>
-                                    <Item text={obj.text} key={index} />
+                                    <Item
+                                        text={obj.text}
+                                        key={index}
+                                    // onCheckBoxClick={this.onCheckBoxClick}
+                                    />
                                 )}
                             </ul>
                         )

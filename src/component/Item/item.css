@@ -5,7 +5,10 @@
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
+    cursor: pointer;
+
 }
+
 
 .space-icon {
     margin-right: 12px;
@@ -16,6 +19,8 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     background-position: center;
+    cursor: pointer;
+
 }
 
 .icon.favorite {
@@ -41,5 +46,10 @@ input[type="checkbox"] {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
 }
+
+.text-style.done-task {
+    text-decoration: line-through;
+}
+
+.text-style {}
