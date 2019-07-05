@@ -3,14 +3,13 @@ import './item.css';
 
 const Item = ({ text }) => {
     return (
-        <ul className="list-group">
-            <li className="list-group-item">
-                <input type="checkbox" />
-                <sapn className="icon"></sapn>
-                {text}
-            </li>
-        </ul>
+        <li className="list-group-item">
+            <input type="checkbox" />
+            <div className="icon favorite"></div>
+            <div className="icon trash"></div>
+            {text}
+        </li>
     );
-}
+} 
 
 export default Item;
