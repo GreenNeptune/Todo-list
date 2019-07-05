@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './lists.css';
 import Item from '../Item/Item';
+import Collapsible from 'react-collapsible';
 
 export default class Lists extends Component {
     render() {
@@ -12,9 +13,9 @@ export default class Lists extends Component {
 
                 <div className="row ToDo">
                     <div className="d-flex align-items-center col-9 offset-1">
+                    <Collapsible trigger={'Todo List'}>
                         {this.props.toDolist && this.props.toDolist.length > 0 ?
                             (
-
                                 <ul className="list-group">
                                     {this.props.toDolist.map((obj, index) =>
                                         <Item
@@ -26,8 +27,9 @@ export default class Lists extends Component {
                                 </ul>
                             )
                             :
-                            ""
+                            <div></div>
                         }
+                    </Collapsible>
                     </div>
                 </div>
                 

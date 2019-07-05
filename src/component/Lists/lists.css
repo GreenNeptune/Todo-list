@@ -1,4 +1,19 @@
-.deafault-todo-list {}
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+
+.deafault-todo-list {
+    margin-top: 1%;
+    padding-left: 2%;
+
+
+
+}
+
+.Collapsible__trigger {
+    height: 40px;
+    background-color: #fff;
+    font-family: 'DM Serif Display',
+        serif;
+}
 
 .list-group {
     width: 100%;
