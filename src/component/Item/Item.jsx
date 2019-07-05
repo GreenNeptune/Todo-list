@@ -15,11 +15,11 @@ export default class Item extends Component {
         this.handleCheckBoxClick = this.handleCheckBoxClick.bind(this);
     }
     componentDidUpdate() {
+        console.log('componentDidUpdate');
         if (this.state.marked && this.state.text.length > 0) {
             this.props.onCheckBoxClick(Object.assign({}, this.state))
         }
     }
-
     handleCheckBoxClick(e) {
         const target = e.target;
 
