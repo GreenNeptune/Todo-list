@@ -7,28 +7,21 @@ class ContainerLists extends Component {
         this.addInput = this.addInput.bind(this);
         this.addToDoneList = this.addToDoneList.bind(this);
         this.state = {
-                todoList: [],
-                doneList: []
+            todoList: [],
+            doneList: []
         }
     }
     addInput(item) {
         console.log(item);
         this.setState({
-            lists: {
-                todoList: [...this.state.todoList, item],
-                doneList: [...this.state.doneList]
-            }
+            todoList: [...this.state.todoList, item]
         })
     }
     addToDoneList(itemDone) {
         console.log(itemDone);
-
-        this.setState({
-            lists: {
-                todoList: [...this.state.todoList],
-                doneList: [...this.state.doneList, itemDone]
-            }
-        })
+        // this.setState({
+        //     doneList: [...this.state.doneList, itemDone]
+        // })
     }
 
     render() {

@@ -10,7 +10,6 @@ export default class Lists extends Component {
         this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
     }
     onCheckBoxClick(itemDone) {
-        debugger
         this.props.addToDoneList(Object.assign({}, itemDone));
     }
     render() {
