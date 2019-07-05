@@ -2,7 +2,6 @@
 
     .deafault-todo-list {
         margin-top: 1%;
-        padding-left: 2%;
     }
 
     .Collapsible__trigger {
@@ -14,7 +13,7 @@
     }
 
     .list-group {
-        width: 50vw;
+        width: 46vw;
         margin-top: 1%;
         height: 20vh;
     }
@@ -33,6 +32,8 @@
     }
 
     .deafault-list-header {
+        position: relative;
+        right: 4vw;
         padding: 1vw;
         font-size: 2em;
         color: white;
@@ -54,8 +55,8 @@
         font-family: 'FontAwesome';
         content: '\25BE';
         position: absolute;
-        left: -21px;
-        top: -85px;
+        right: 25px;
+        top: -87px;
         display: block;
         transition: transform 300ms;
         -webkit-transition: transform 300ms;
