@@ -7,10 +7,12 @@ input[type="checkbox"] {
     height: 20px;
 }
 
+.space-icon {
+    margin-right: 12px;
+}
+
 .icon {
-    display: inline-block;
     background-repeat: no-repeat;
-    margin: 10px 6px 0;
     width: 20px;
     height: 20px;
     background-position: center;
@@ -22,9 +24,12 @@ input[type="checkbox"] {
 
 .icon.trash {
     background-image: url("../../img/activities_svg/trash.svg");
+    margin-left: 12px;
 }
 
 .list-group-item {
+    align-items: center;
+    display: flex;
     background-color: #fff;
 }
 
