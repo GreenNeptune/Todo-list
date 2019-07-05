@@ -10,14 +10,10 @@
     cursor: pointer;
 }
 
-.background-green{
-    
-}
-
 .list-group {
-    width: 46vw;
-    margin-top: 1%;
-    height: 16vw;
+  width: 46vw;
+  margin-top: 1%;
+  height: 16vw;
 }
 
 .margin-top {
