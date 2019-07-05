@@ -1,11 +1,17 @@
 .app-header{
-
+    background-color: #07b7c0;
+    padding: 4vw;
 }
 
 .app-header-title{
-
+    font-size: 4em;
+    color: white;
 }
 
 .logo{
-
+    margin-right: 2vw;
+    width: 64px;
+    height: 64px;
+    background-image: url(../../img/app_header/green-checkmark.svg);
+    
 }
