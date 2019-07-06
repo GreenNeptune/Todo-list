@@ -17,12 +17,16 @@ class ContainerLists extends Component {
             todoList: [...this.state.todoList, item]
         })
     }
+    
     addToDoneList(itemDone) {
+        debugger
+        console.log("itemDone");
         console.log(itemDone);
-        // this.setState({
-        //     doneList: [...this.state.doneList, itemDone]
-        // })
+        this.setState({
+            doneList: [...this.state.doneList, itemDone]
+        })
     }
+    
 
     render() {
         return (
@@ -33,7 +37,7 @@ class ContainerLists extends Component {
                 <Lists
                     toDolist={this.state.todoList}
                     doneList={this.state.doneList}
-                    addToDoneList={this.addToDoneList}
+                    
                 />
             </div>
         )
