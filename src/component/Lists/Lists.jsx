@@ -26,10 +26,10 @@ export default class Lists extends Component {
                 </div>
                 <div className="row ToDo">
                     <div className="d-flex align-items-center col-1">
-                        <ItemList itemList={this.props.toDolist} />
+                        <ItemList itemList={this.props.toDolist} handleActivity={this.props.handleActivity} />
                     </div>
                     <div className="d-flex align-items-center col-1 offset-5">
-                        <ItemList itemList={this.props.doneList} />
+                        <ItemList itemList={this.props.doneList} handleActivity={this.props.handleActivity} />
                     </div>
                 </div>
             </div>

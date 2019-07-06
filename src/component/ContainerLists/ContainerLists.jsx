@@ -5,47 +5,44 @@ class ContainerLists extends Component {
     constructor() {
         super();
         this.addInput = this.addInput.bind(this);
-        // this.handleOnChange = this.handleOnChange.bind(this);
+        this.handleActivity = this.handleActivity.bind(this);
+        this.moveToList = this.moveToList.bind(this);
         this.state = {
             todoList: [],
             doneList: []
         }
     }
 
-
-    handleChecked(status) {
-        if (status === true) {
-            this.handleOnChange()
-        }
-        this.state.AddDoneList()
-    }
-
-
     addInput(item) {
         this.setState({
             todoList: [...this.state.todoList, item]
         })
     }
-    // handleOnChange(itemDone) {
-    //     console.log(itemDone);
-    //     this.setState({
-    //         doneList: [...this.state.doneList, itemDone]
-    //     })
-    // }
+    moveToList(listType, index) {
+        if (listType === "Done") {
+            let item = this.state.todoList[index];
+            item.marked = true;
+            console.log(item);
+            this.setState({
+                doneList: [...this.state.doneList, item]
+            })
 
-    //     icon: handleOnChange{
-    //     ("Done")
-    // }
-    //     Itme: activity = ""
-    //     this.props.handleOnChange{ (activity) => { this.handleOnChange(activity)}}
 
-    //     handleOnChange(activity) { 
-    //         if(activity === "delete")
-    //             if (activity === "add")
-    //         if (remove) {
+        } else if (listType === "unDone") {
 
-    //         }
-    //     }
+        }
+    }
+
+    handleActivity(activity, index) {
+        if (activity === "Done") {
+            this.moveToList("Done", index);
+            console.log("object is checked" + activity);
+        }
+        else if (activity === "unDone") {
+            console.log("object is unchecked" + activity);
+        }
+
+    }
 
     render() {
         return (
@@ -56,7 +53,7 @@ class ContainerLists extends Component {
                 <Lists
                     toDolist={this.state.todoList}
                     doneList={this.state.doneList}
-                    handleOnChange={this.handleOnChange}
+                    handleActivity={this.handleActivity}
                 />
             </div>
         )
