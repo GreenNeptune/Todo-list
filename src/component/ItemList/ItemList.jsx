@@ -4,11 +4,6 @@ import Scroll from '../Scroll/Scroll';
 import Item from '../Item/Item';
 import './itemList.css';
 export default class ItemList extends Component {
-    constructor() {
-        super();
-
-    }
-
     render() {
         return (
             <div>
@@ -19,7 +14,8 @@ export default class ItemList extends Component {
                                 <Item
                                     item={obj}
                                     key={index}
-                                    onCheckBoxClick={this.props.onCheckBoxClick}
+                                    index={index}
+                                    handleActivity={this.props.handleActivity}
                                 />
                             )}
                         </ul>

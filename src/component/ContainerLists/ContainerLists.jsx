@@ -5,61 +5,40 @@ class ContainerLists extends Component {
     constructor() {
         super();
         this.addInput = this.addInput.bind(this);
-        // this.handleOnChange = this.handleOnChange.bind(this);
+        this.handleActivity = this.handleActivity.bind(this);
+        this.moveToList = this.moveToList.bind(this);
         this.state = {
             todoList: [],
             doneList: []
         }
     }
 
-
-    handleChecked(status) {
-        if (status === true) {
-            this.handleOnChange()
-        }
-        this.state.AddDoneList()
-    }
-
-
     addInput(item) {
         this.setState({
             todoList: [...this.state.todoList, item]
         })
     }
-<<<<<<< HEAD
-    
-    addToDoneList(itemDone) {
-        debugger
-        console.log("itemDone");
-        console.log(itemDone);
-        this.setState({
-            doneList: [...this.state.doneList, itemDone]
-        })
+
+    moveToList(listType, index) {
+        if (listType === "Done") {
+            let item = this.state.todoList[index];
+            item.marked = true;
+            console.log(item);
+            this.setState({
+                doneList: [...this.state.doneList, item]
+            })
+        }
     }
-    
-=======
-    // handleOnChange(itemDone) {
-    //     console.log(itemDone);
-    //     this.setState({
-    //         doneList: [...this.state.doneList, itemDone]
-    //     })
-    // }
+    handleActivity(activity, index) {
+        if (activity === "Done") {
+            this.moveToList("Done", index);
+            console.log("object is checked" + activity);
+        }
+        else if (activity === "unDone") {
+            console.log("object is unchecked" + activity);
+        }
 
-    //     icon: handleOnChange{
-    //     ("Done")
-    // }
-    //     Itme: activity = ""
-    //     this.props.handleOnChange{ (activity) => { this.handleOnChange(activity)}}
-
-    //     handleOnChange(activity) { 
-    //         if(activity === "delete")
-    //             if (activity === "add")
-    //         if (remove) {
-
-    //         }
-    //     }
->>>>>>> 5c581cd87321b52224cf914db908048f7a71a5d4
-
+    }
     render() {
         return (
             <div>
@@ -69,11 +48,7 @@ class ContainerLists extends Component {
                 <Lists
                     toDolist={this.state.todoList}
                     doneList={this.state.doneList}
-<<<<<<< HEAD
-                    
-=======
-                    handleOnChange={this.handleOnChange}
->>>>>>> 5c581cd87321b52224cf914db908048f7a71a5d4
+                    handleActivity={this.handleActivity}
                 />
             </div>
         )
