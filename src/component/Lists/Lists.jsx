@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './lists.css';
-import Item from '../Item/Item';
-import Collapsible from 'react-collapsible';
-import Scroll from '../Scroll/Scroll';
+import ItemList from '../ItemList/ItemList';
+
+// import Item from '../Item/Item';
+// import Scroll from '../Scroll/Scroll';
 
 export default class Lists extends Component {
     constructor() {
@@ -10,7 +11,7 @@ export default class Lists extends Component {
         this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
     }
     onCheckBoxClick(itemDone) {
-        this.props.addToDoneList(Object.assign({}, itemDone));
+        this.props.addToDoneList(itemDone);
     }
     render() {
         return (
@@ -25,52 +26,13 @@ export default class Lists extends Component {
                 </div>
                 <div className="row ToDo">
                     <div className="d-flex align-items-center col-1">
-                        <Collapsible open={true}>
-                            <Scroll>
-                                {this.props.toDolist && this.props.toDolist.length > 0 ?
-                                    (
-                                        <ul className="list-group">
-                                            {this.props.toDolist.map((obj, index) =>
-                                                <Item
-                                                    text={obj.text}
-                                                    key={index}
-                                                    onCheckBoxClick={this.onCheckBoxClick}
-                                                    toDolist={this.props.toDolist}
-                                                />
-                                            )}
-                                        </ul>
-                                    )
-                                    :
-                                    <div></div>
-                                }
-                            </Scroll>
-                        </Collapsible>
+                        <ItemList itemList={this.props.toDolist} />
                     </div>
                     <div className="d-flex align-items-center col-1 offset-5">
-                        <Collapsible open={true}>
-                            <Scroll>
-                                {this.props.doneList && this.props.doneList.length > 0 ?
-                                    (
-                                        <ul className="list-group">
-                                            {this.props.doneList.map((obj, index) =>
-                                                <Item
-                                                    text={obj.text}
-                                                    key={index}
-                                                // onCheckBoxClick={this.onCheckBoxClick}
-                                                />
-                                            )}
-                                        </ul>
-                                    )
-                                    :
-                                    <div></div>
-                                }
-                            </Scroll>
-                        </Collapsible>
-
+                        <ItemList itemList={this.props.doneList} />
                     </div>
                 </div>
             </div>
         )
     }
 }
-
