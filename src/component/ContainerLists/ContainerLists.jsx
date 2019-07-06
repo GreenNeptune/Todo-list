@@ -19,26 +19,48 @@ class ContainerLists extends Component {
         })
     }
 
+    addToDoneList(index) {
+        let item = this.state.todoList[index];
+        item.marked = true;
+        this.setState({
+            todoList: [...this.state.todoList],
+            doneList: [...this.state.doneList, item],
+        })
+    }
+
+    addToDoList(index) {
+        let item = this.state.todoList[index];
+        item.marked = false;
+        let doneList = this.state.doneList;        
+        doneList.splice(index, 1);
+        this.setState({
+            doneList: [...doneList],
+            todoList: [...this.state.todoList, item]
+        })
+    }
+
+
     moveToList(listType, index) {
-        if (listType === "Done") {
-            let item = this.state.todoList[index];
-            item.marked = true;
-            console.log(item);
-            this.setState({
-                doneList: [...this.state.doneList, item]
-            })
+        if (listType === "doneList") {
+            this.addToDoneList(index);
+        } else if (listType === "toDoList") {
+            this.addToDoList(index);
         }
     }
+
+
     handleActivity(activity, index) {
         if (activity === "Done") {
-            this.moveToList("Done", index);
+            this.moveToList("doneList", index);
             console.log("object is checked" + activity);
         }
         else if (activity === "unDone") {
+            this.moveToList("toDoList", index);
+
             console.log("object is unchecked" + activity);
         }
-
     }
+
     render() {
         return (
             <div>
