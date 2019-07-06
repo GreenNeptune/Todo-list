@@ -5,24 +5,47 @@ class ContainerLists extends Component {
     constructor() {
         super();
         this.addInput = this.addInput.bind(this);
-        this.addToDoneList = this.addToDoneList.bind(this);
+        // this.handleOnChange = this.handleOnChange.bind(this);
         this.state = {
             todoList: [],
             doneList: []
         }
     }
+
+
+    handleChecked(status) {
+        if (status === true) {
+            this.handleOnChange()
+        }
+        this.state.AddDoneList()
+    }
+
+
     addInput(item) {
-        console.log(item);
         this.setState({
             todoList: [...this.state.todoList, item]
         })
     }
-    addToDoneList(itemDone) {
-        console.log(itemDone);
-        // this.setState({
-        //     doneList: [...this.state.doneList, itemDone]
-        // })
-    }
+    // handleOnChange(itemDone) {
+    //     console.log(itemDone);
+    //     this.setState({
+    //         doneList: [...this.state.doneList, itemDone]
+    //     })
+    // }
+
+    //     icon: handleOnChange{
+    //     ("Done")
+    // }
+    //     Itme: activity = ""
+    //     this.props.handleOnChange{ (activity) => { this.handleOnChange(activity)}}
+
+    //     handleOnChange(activity) { 
+    //         if(activity === "delete")
+    //             if (activity === "add")
+    //         if (remove) {
+
+    //         }
+    //     }
 
     render() {
         return (
@@ -33,7 +56,7 @@ class ContainerLists extends Component {
                 <Lists
                     toDolist={this.state.todoList}
                     doneList={this.state.doneList}
-                    addToDoneList={this.addToDoneList}
+                    handleOnChange={this.handleOnChange}
                 />
             </div>
         )
