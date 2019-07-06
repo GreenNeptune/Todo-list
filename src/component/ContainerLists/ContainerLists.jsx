@@ -18,6 +18,7 @@ class ContainerLists extends Component {
             todoList: [...this.state.todoList, item]
         })
     }
+
     moveToList(listType, index) {
         if (listType === "Done") {
             let item = this.state.todoList[index];
@@ -26,13 +27,8 @@ class ContainerLists extends Component {
             this.setState({
                 doneList: [...this.state.doneList, item]
             })
-
-
-        } else if (listType === "unDone") {
-
         }
     }
-
     handleActivity(activity, index) {
         if (activity === "Done") {
             this.moveToList("Done", index);
@@ -43,7 +39,6 @@ class ContainerLists extends Component {
         }
 
     }
-
     render() {
         return (
             <div>
