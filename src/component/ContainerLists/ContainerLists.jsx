@@ -47,7 +47,8 @@ class ContainerLists extends Component {
         }
     }
 
-    deleteItemFromList(index, activity) {
+    deleteItemFromList(activity, index) {
+        console.log(activity);
         if (activity === "deleteFromToDoList") {
             // in the to do list
             let tempToDoList = this.state.todoList;

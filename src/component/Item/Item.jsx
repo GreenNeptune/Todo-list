@@ -23,7 +23,6 @@ export default class Item extends Component {
         this.props.handleActivity("WhenTodoList Favorite", this.props.index);
     }
     render() {
-
         return (
             <li className="list-group-item d-flex justify-content-between">
                 <div className="d-flex justify-content-between">
