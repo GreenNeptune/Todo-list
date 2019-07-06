@@ -7,49 +7,32 @@ class ContainerLists extends Component {
         super();
         this.addInput = this.addInput.bind(this);
         this.handleActivity = this.handleActivity.bind(this);
-        // this.moveToList = this.moveToList.bind(this);
-        // this.addToDoList = this.addToDoList.bind(this);
-        // this.addToDoneList = this.addToDoList.bind(this);
+
         this.state = {
             todoList: [],
             doneList: []
         }
     }
-
     addInput(item) {
         this.setState({
             todoList: [...this.state.todoList, item]
         })
     }
-
     addToDoList(index) {
         let item = this.state.doneList[index];
-
         item.marked = false;
-        let doneList = [];
-        for (let i = 0; i < this.state.doneList.length; i++) {
-            if (i !== index) {
-                doneList.push(this.state.doneList[i]);
-            }
-        }
-
-
+        let doneList = this.state.doneList;
+        doneList.splice(index, 1);
         this.setState({
             doneList: [...doneList],
             todoList: [...this.state.todoList, item]
         })
     }
-
     addToDoneList(index) {
         let item = this.state.todoList[index];
-        console.log("item ");
-        console.log(item);
         item.marked = true;
         let tempToDoList = this.state.todoList;
-
         tempToDoList.splice(index, 1);
-        // console.log("list : ")
-
         this.setState({
             doneList: [...this.state.doneList, item],
             todoList: [...tempToDoList]
@@ -64,19 +47,59 @@ class ContainerLists extends Component {
         }
     }
 
+    deleteItemFromList(index, activity) {
+        if (activity === "deleteFromToDoList") {
+            // in the to do list
+            let tempToDoList = this.state.todoList;
+            tempToDoList.splice(index, 1);
+            this.setState({
+                todoList: [...tempToDoList]
+            })
+        }
+        else if (activity === "deleteFromToDoneList") {
+            // in the to Donelistlet item = this.state.todoList[index];
+            let tempDoneList = this.state.doneList;
+            tempDoneList.splice(index, 1);
+            this.setState({
+                doneList: [...tempDoneList]
+            })
+        }
+    }
+
+    handleFavoriteItem(activity, index) {
+        if (activity === "WhenTodoList Favorite") {
+            let todoList = this.state.todoList;
+            let item = this.state.todoList[index];
+            console.log('father');
+            console.log(item.favorite);
+            if (!item.favorite) {
+                item.favorite = true;
+                todoList.splice(index, 1);
+                this.setState({
+                    todoList: [item, ...todoList]
+                })
+            }
+        }
+    }
+
+
     handleActivity(activity, index) {
         if (activity === "Done") {
             this.moveToList("doneList", index);
         }
         else if (activity === "unDone") {
             this.moveToList("toDoList", index);
-
+        }
+        else if (activity === "deleteFromToDoList") {
+            this.deleteItemFromList(activity, index);
+        } else if (activity === "deleteFromToDoneList") {
+            this.deleteItemFromList(activity, index);
+        } else if (activity === "WhenTodoList Favorite") {
+            this.handleFavoriteItem(activity, index);
         }
     }
 
     render() {
-        console.log('render contanierList todoList: ');
-        console.log(this.state.todoList);
         return (
             <div>
                 <AddItem

@@ -6,6 +6,7 @@ export default class Item extends Component {
         super(props);
         this.handleChangeSign = this.handleChangeSign.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
+        this.toggleFavoriteItem = this.toggleFavoriteItem.bind(this);
     }
 
     handleChangeSign() {
@@ -14,15 +15,21 @@ export default class Item extends Component {
     }
 
     deleteItem() {
-        this.props.handleActivity("deleteItem", this.props.index);
-
+        let activity = this.props.item.marked ? "deleteFromToDoneList" : "deleteFromToDoList";
+        this.props.handleActivity(activity, this.props.index);
+    }
+    toggleFavoriteItem() {
+        // let activity = this.props.item.marked ? "whenDoneList" : "WhenTodoList";
+        this.props.handleActivity("WhenTodoList Favorite", this.props.index);
     }
     render() {
+
         return (
             <li className="list-group-item d-flex justify-content-between">
                 <div className="d-flex justify-content-between">
                     <input checked={this.props.item.marked} onChange={this.handleChangeSign} title="mark" type="checkbox" className="space-icon" />
-                    <div title="favorite" className="icon favorite space-icon"></div>
+                    <div onClick={this.toggleFavoriteItem} title="favorite" className={`icon space-icon ${this.props.item.favorite ? "selected" : "favorite"}`}></div>
+                    {/* ${this.props.favorite ? "selected" : "favorite" */}
                     <div className={`text-style ${this.props.item.marked ? 'done-task' : ''}`}>
                         {this.props.item.text}
                     </div>
@@ -30,7 +37,7 @@ export default class Item extends Component {
                 <div>
                     <div onClick={this.deleteItem} title="delete" className="icon trash"></div>
                 </div>
-            </li >
+            </li>
         );
     }
 }
