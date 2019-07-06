@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './lists.css';
 import ItemList from '../ItemList/ItemList';
 
-// import Item from '../Item/Item';
-// import Scroll from '../Scroll/Scroll';
-
 export default class Lists extends Component {
     constructor() {
         super();
