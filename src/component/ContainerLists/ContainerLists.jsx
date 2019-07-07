@@ -72,11 +72,6 @@ class ContainerLists extends Component {
             this.addToDoneList(index);
         } else if (listType === "toDoList") {
             this.addToDoList(index);
-<<<<<<< HEAD
-        }
-    }
-
-=======
         }
     }
 
@@ -116,19 +111,10 @@ class ContainerLists extends Component {
         }
     }
 
->>>>>>> e3301736c36376a7aa79f28e8f73ce31516db715
 
     handleActivity(activity, index) {
         if (activity === "Done") {
             this.moveToList("doneList", index);
-<<<<<<< HEAD
-            console.log("object is checked" + activity);
-        }
-        else if (activity === "unDone") {
-            this.moveToList("toDoList", index);
-
-            console.log("object is unchecked" + activity);
-=======
         }
         else if (activity === "unDone") {
             this.moveToList("toDoList", index);
@@ -139,7 +125,6 @@ class ContainerLists extends Component {
             this.deleteItemFromList(activity, index);
         } else if (activity === "WhenTodoList Favorite") {
             this.handleFavoriteItem(activity, index);
->>>>>>> e3301736c36376a7aa79f28e8f73ce31516db715
         }
     }
 
