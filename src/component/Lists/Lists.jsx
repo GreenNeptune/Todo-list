@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './lists.css';
 import ItemList from '../ItemList/ItemList';
 
-// import Item from '../Item/Item';
-// import Scroll from '../Scroll/Scroll';
-
 export default class Lists extends Component {
     render() {
         return (
@@ -13,7 +10,7 @@ export default class Lists extends Component {
                     <div className=" d-flex col-2 offset-1">
                         <h3 className="deafault-list-header">Todo List</h3>
                     </div>
-                    <div className=" d-flex col-2 offset-4">
+                    <div className="d-flex col-2 offset-4">
                         <h3 className="deafault-list-header">Done List</h3>
                     </div>
                 </div>

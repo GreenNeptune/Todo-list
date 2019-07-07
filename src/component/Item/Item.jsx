@@ -26,15 +26,28 @@ export default class Item extends Component {
         return (
             <li className="list-group-item d-flex justify-content-between">
                 <div className="d-flex justify-content-between">
-                    <input checked={this.props.item.marked} onChange={this.handleChangeSign} title="mark" type="checkbox" className="space-icon" />
-                    <div onClick={this.toggleFavoriteItem} title="favorite" className={`icon space-icon ${this.props.item.favorite ? "selected" : "favorite"}`}></div>
-                    {/* ${this.props.favorite ? "selected" : "favorite" */}
+                    <input
+                        type="checkbox"
+                        title="mark"
+                        onChange={this.handleChangeSign}
+                        checked={this.props.item.marked}
+                        className="space-icon"
+                    />
+                    <div
+                        onClick={this.toggleFavoriteItem}
+                        title="favorite"
+                        className={`icon space-icon ${this.props.item.favorite ? "selected" : "favorite"}`}>
+                    </div>
                     <div className={`text-style ${this.props.item.marked ? 'done-task' : ''}`}>
                         {this.props.item.text}
                     </div>
                 </div>
                 <div>
-                    <div onClick={this.deleteItem} title="delete" className="icon trash"></div>
+                    <div
+                        onClick={this.deleteItem}
+                        title="delete"
+                        className="icon trash">
+                    </div>
                 </div>
             </li>
         );

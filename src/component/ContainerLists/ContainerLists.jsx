@@ -48,7 +48,6 @@ class ContainerLists extends Component {
     }
 
     deleteItemFromList(activity, index) {
-        console.log(activity);
         if (activity === "deleteFromToDoList") {
             // in the to do list
             let tempToDoList = this.state.todoList;
@@ -58,7 +57,6 @@ class ContainerLists extends Component {
             })
         }
         else if (activity === "deleteFromToDoneList") {
-            // in the to Donelistlet item = this.state.todoList[index];
             let tempDoneList = this.state.doneList;
             tempDoneList.splice(index, 1);
             this.setState({
@@ -71,8 +69,6 @@ class ContainerLists extends Component {
         if (activity === "WhenTodoList Favorite") {
             let todoList = this.state.todoList;
             let item = this.state.todoList[index];
-            console.log('father');
-            console.log(item.favorite);
             if (!item.favorite) {
                 item.favorite = true;
                 todoList.splice(index, 1);
@@ -99,7 +95,6 @@ class ContainerLists extends Component {
             this.handleFavoriteItem(activity, index);
         }
     }
-
     render() {
         return (
             <div>
