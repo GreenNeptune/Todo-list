@@ -7,17 +7,20 @@ class ContainerLists extends Component {
         super();
         this.addInput = this.addInput.bind(this);
         this.handleActivity = this.handleActivity.bind(this);
-
         this.state = {
             todoList: [],
             doneList: []
         }
     }
+
+
     addInput(item) {
         this.setState({
             todoList: [...this.state.todoList, item]
         })
     }
+
+
     addToDoList(index) {
         let item = this.state.doneList[index];
         item.marked = false;
@@ -28,6 +31,8 @@ class ContainerLists extends Component {
             todoList: [...this.state.todoList, item]
         })
     }
+
+
     addToDoneList(index) {
         let item = this.state.todoList[index];
         item.marked = true;
@@ -39,6 +44,7 @@ class ContainerLists extends Component {
         })
     }
 
+
     moveToList(listType, index) {
         if (listType === "doneList") {
             this.addToDoneList(index);
@@ -47,9 +53,9 @@ class ContainerLists extends Component {
         }
     }
 
+
     deleteItemFromList(activity, index) {
         if (activity === "deleteFromToDoList") {
-            // in the to do list
             let tempToDoList = this.state.todoList;
             tempToDoList.splice(index, 1);
             this.setState({
@@ -65,6 +71,7 @@ class ContainerLists extends Component {
         }
     }
 
+
     handleFavoriteItem(activity, index) {
         if (activity === "WhenTodoList Favorite") {
             let todoList = this.state.todoList;
@@ -78,6 +85,7 @@ class ContainerLists extends Component {
             }
         }
     }
+
 
 
     handleActivity(activity, index) {
@@ -95,6 +103,8 @@ class ContainerLists extends Component {
             this.handleFavoriteItem(activity, index);
         }
     }
+
+
     render() {
         return (
             <div>

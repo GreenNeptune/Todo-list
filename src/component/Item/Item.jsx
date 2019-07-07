@@ -19,7 +19,6 @@ export default class Item extends Component {
         this.props.handleActivity(activity, this.props.index);
     }
     toggleFavoriteItem() {
-        // let activity = this.props.item.marked ? "whenDoneList" : "WhenTodoList";
         this.props.handleActivity("WhenTodoList Favorite", this.props.index);
     }
     render() {
