@@ -21,17 +21,24 @@ class ContainerLists extends Component {
 
     addToDoneList(index) {
         let item = this.state.todoList[index];
+        console.log("item " + item);
         item.marked = true;
+
+        let tempToDoList = this.state.todoList;
+
+        tempToDoList.splice(index, 1);
+        debugger
         this.setState({
-            todoList: [...this.state.todoList],
             doneList: [...this.state.doneList, item],
+            todoList: [...tempToDoList]
         })
     }
+
 
     addToDoList(index) {
         let item = this.state.todoList[index];
         item.marked = false;
-        let doneList = this.state.doneList;        
+        let doneList = this.state.doneList;
         doneList.splice(index, 1);
         this.setState({
             doneList: [...doneList],

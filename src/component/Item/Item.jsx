@@ -36,7 +36,7 @@ export default class Item extends Component {
                 <div className="d-flex justify-content-between">
                     <input checked={this.state.marked} onChange={this.handleChangeSign} title="mark" type="checkbox" className="space-icon" />
                     <div title="favorite" className="icon favorite space-icon"></div>
-                    <div className={`text-style ${this.state.marked ? 'done-task' : ''}`}>
+                    <div className={`text-style ${this.marked ? 'done-task' : ''}`}>
                         {this.props.item.text}
                     </div>
                 </div>
