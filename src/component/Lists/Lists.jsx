@@ -3,13 +3,6 @@ import './lists.css';
 import ItemList from '../ItemList/ItemList';
 
 export default class Lists extends Component {
-    constructor() {
-        super();
-        this.onCheckBoxClick = this.onCheckBoxClick.bind(this);
-    }
-    onCheckBoxClick(itemDone) {
-        this.props.addToDoneList(itemDone);
-    }
     render() {
         return (
             <div>
@@ -23,10 +16,16 @@ export default class Lists extends Component {
                 </div>
                 <div className="row ToDo">
                     <div className="d-flex align-items-center col-1">
-                        <ItemList itemList={this.props.toDolist} handleActivity={this.props.handleActivity} />
+                        <ItemList
+                            itemList={this.props.toDolist}
+                            handleActivity={this.props.handleActivity}
+                        />
                     </div>
                     <div className="d-flex align-items-center col-1 offset-5">
-                        <ItemList itemList={this.props.doneList} handleActivity={this.props.handleActivity} />
+                        <ItemList
+                            itemList={this.props.doneList}
+                            handleActivity={this.props.handleActivity}
+                        />
                     </div>
                 </div>
             </div>

@@ -20,12 +20,17 @@ input[type="checkbox"] {
     height: 20px;
     background-position: center;
     cursor: pointer;
-
+    
 }
 
 .icon.favorite {
     background-image: url("../../img/activities_svg/favorite.svg");
 }
+
+.selected {
+    background-image: url("../../img/activities_svg/favorite_selected.svg");
+}
+
 
 .icon.trash {
     background-image: url("../../img/activities_svg/trash.svg");
